@@ -1,0 +1,109 @@
+.hidden {
+    display: none;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(100%, 0);
+    }
+}
+.alert {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 14rem; /* Điều chỉnh khoảng cách từ trên cùng */
+    right: 2rem; /* Điều chỉnh khoảng cách từ bên phải */
+    width: 40rem; /* Chiều rộng của alert */
+    z-index: 1000; /* Đảm bảo nó hiển thị trên các phần tử khác */
+}
+
+.alert.show {
+    display: block; /* Hiển thị alert khi cần */
+}
+
+.message-box {
+    width: 40rem;
+    /* Increased width */
+    border-radius: 6px;
+    margin: 0px 20px 0px auto;
+    z-index: 1000;
+    /* Adjusted margin for left alignment */
+    /* padding: 20px;  */
+    /* Added padding for better content spacing */
+    /*opacity: 0; /* Start with hidden */
+    /*animation-duration: 0.5s; /* Duration of the animation */
+    /*animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+.message-box i {
+    vertical-align: middle;
+    padding: 20px;
+}
+
+
+.message-box span{
+    font-size: 1.4rem;
+}
+
+.message-box i.exit-button {
+    float: right;
+    opacity: 0.4;
+}
+
+.message-box i.exit-button:hover {
+    opacity: 0.8;
+}
+
+.message-text {
+    vertical-align: middle;
+}
+
+.message-box-info {
+    background-color: #CDE8F6;
+    border: #6B90A8 2px solid;
+    color: #447EAF;
+    animation-name: slideIn;
+    animation-delay: 0s, 2.5s; /* Show immediately, then wait for 2.5s before sliding out */
+    animation: slideIn 0.8s forwards, slideOut 0.5s forwards 2.5s; /* Animate in then out */
+}
+
+.message-box-warn {
+    background-color: #F8F4D5;
+    border: #CFC79B 2px solid;
+    color: #96722E;
+    animation-name: slideIn;
+    animation-delay: 0s, 2.5s; /* Show immediately, then wait for 2.5s before sliding out */
+    animation: slideIn 0.8s forwards, slideOut 0.5s forwards 2.5s; /* Animate in then out */
+}
+
+.message-box-error {
+    background-color: #ECC8C5;
+    border: #D7A09C 2px solid;
+    color: #B83C37;
+    animation-name: slideIn;
+    animation-delay: 0s, 2.5s; /* Show immediately, then wait for 2.5s before sliding out */
+    animation: slideIn 0.8s forwards, slideOut 0.5s forwards 2.5s; /* Animate in then out */
+}
+
+.message-box-success {
+    background-color: #DDF3D5;
+    background-color: rgba(221, 243, 213, 0.5);
+    border: #B0D9A7 2px solid;
+    color: #597151;
+    animation-name: slideIn;
+    animation-delay: 0s, 2.5s; /* Show immediately, then wait for 2.5s before sliding out */
+    animation: slideIn 0.8s forwards, slideOut 0.5s forwards 2.5s; /* Animate in then out */
+}
